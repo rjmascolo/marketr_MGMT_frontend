@@ -17,4 +17,4 @@ Use the UN and PW below to access an account with seed data to play around with.
 UN: ryan@email.com <br />
 PW: 123
 
-Note: The code is hoisted on a free Heroku account so it will take a few moments for it to boot up.
+The backend is located on a different repository. [Check it out!](https://github.com/rjmascolo/marketr_MGMT_backend)
