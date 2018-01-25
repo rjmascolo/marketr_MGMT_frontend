@@ -1,0 +1,39 @@
+#fill-page{
+  height:50em;
+  width: 100%;
+  background-color: #E26D5A;
+  display: flex;
+  justify-content: center;
+
+
+}
+#login-form {
+  width:50%;
+  padding: 2em;
+  margin: 5em 0;
+  box-shadow:5px 10px #888888;
+  border-radius: .3em;
+  background-color: white;
+
+  /* margin: 5em auto;
+  background-color: white; */
+}
+
+#login-header {
+  color:#E26D5A
+
+}
+
+#login-button {
+  background-color: #E26D5A;
+  color: white;
+}
+
+#group {
+  display:flex;
+  justify-content: space-between;
+}
+
+#margin-right{
+  margin-right: .3em;
+}

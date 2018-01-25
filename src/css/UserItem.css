@@ -1,0 +1,4 @@
+#user-container-border {
+  max-height: 8em;
+  overflow-y: scroll;
+}

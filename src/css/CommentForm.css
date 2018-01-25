@@ -1,0 +1,17 @@
+textarea {
+  width: 100%;
+  height:150px;
+}
+
+#comment-submit-button {
+  margin: 1em 0em;
+}
+#comment-button-div {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.editer-content {
+  padding: .3em .6em;
+  min-height: 7em;
+}

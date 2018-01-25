@@ -1,0 +1,58 @@
+#individual-page-header{
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+#individual-page-container-content {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: rgba(34,36,38,.15) ; */
+}
+
+#user-list {
+  margin: 1em 1em;
+}
+
+#revision-tabs {
+  background-color: white;
+  padding: 1em 1em;
+  border-bottom-right-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+#outer-project-accordian {
+  width: 60%;
+  margin: 1em 1em 4em 1em;
+  background: white;
+  border-radius: .5em;
+  box-shadow: 5px 10px #888888;
+}
+
+#deliverables-div {
+  margin: 1em 1em;
+  width: 25%;
+}
+
+#edit-project-data {
+  display:flex;
+  justify-content: space-between;
+}
+
+#edit-project-button {
+  margin: .3em auto .8em auto;
+}
+
+#deliverable-edit-project-item {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+#asset-item {
+  color: black;
+}
+
+#asset-item:hover {
+  color: #00b5ad;
+}

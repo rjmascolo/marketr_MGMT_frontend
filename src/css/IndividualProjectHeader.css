@@ -1,0 +1,144 @@
+
+#header {
+  background: white;
+  /* padding-top: .9em; */
+  /* padding-bottom:1em; */
+  box-shadow: 0px 3px #EAE3E3;
+}
+
+
+#header-content {
+  /* background: white; */
+  /* margin: 0 auto; */
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  /* display: flex; */
+  /* box-shadow: 3px 5px #8E4439; */
+}
+
+#header-title {
+  margin: 0 0 0 0;
+}
+
+#flex-between {
+  display:flex;
+  justify-content: safe center;
+  padding: 2em 0 0 0;
+}
+
+#title-description-image {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: top;
+  text-align: left;
+  padding: 1em 0 0 1em;
+  align-items: center;
+  /* width: 60%; */
+}
+
+#project-details {
+  display:flex;
+  justify-content: safe center;
+  background: #F9F9F9;
+  border-top: .2em solid #DBDBDB;
+  padding: .8em 0 .8em 0;
+}
+
+#header-companies-container {
+  display:flex;
+  justify-content: flex-start;
+}
+
+#label-div {
+  /* display:flex; */
+  /* justify-content: flex-end; */
+  margin: 0 3em 3em 2em;
+}
+
+#header-companies{
+  margin: 0 1em 0 0 ;
+}
+
+#company-div {
+  padding: 0 1em 0 1.5em;
+  border-left: .05em solid #DBDBDB;
+  /* display:inline-flex; */
+  margin-right: 2em;
+  /* border-right: .05em solid #DBDBDB; */
+}
+
+#company-div-inner {
+  margin-top:  .3em
+
+}
+
+#header-dropdown {
+  display: inline-block;
+}
+
+#event-image {
+  /* margin: 1em 4em 1em 0; */
+  /* display: inline-block; */
+}
+#title-dropdown-flex {
+  display:flex;
+  justify-content: space-between;;
+}
+
+#project-image {
+  height: 5em;
+  width: 5em;
+  margin: 0 1.5em 0 0;
+}
+
+#company-image-container {
+  height: 2em;
+  width: 2em;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  margin: .2em .4em;
+}
+
+#company-image {
+  height: 2em;
+  width: 2em;
+  transform: scale(1.7)
+}
+
+#company-details-item {
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+#users-outer-container {
+  margin: 0 0 0 3em;
+}
+#users-outer-container h4 {
+  margin: 0
+}
+
+#users-container {
+  width: 18em;
+}
+
+#project-completed p{
+  padding: 1em;
+  weight:bold;
+}
+
+#project-description {
+  width: 40%;
+}
+#project-description p {
+  text-align: left;
+}
+
+#edit-project-button {
+  margin: 1em 1em 0 0
+}
+
+p {
+  margin: 0 0 0 0
+}

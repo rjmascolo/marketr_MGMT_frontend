@@ -1,0 +1,267 @@
+#loading-div{
+  height:100%;
+  width: 100%;
+}
+
+#background-loading-image{
+  height:70%;
+  width: 100%;
+}
+
+#dashboard-flex-box {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: rgba(34,36,38,.15); */
+  padding: 1em 0 0 0;
+}
+
+#home-nav-link {
+  color: black;
+}
+
+#dashboard-header {
+  /* border-top: .3em solid #9E4B3F; */
+  height: 5em;
+  background: #E26D5A;
+  color: white;
+  padding: 1em;
+  /* margin: .01em 0 1em 0; */
+  box-shadow: 0px 2px #AFAFAF;
+
+}
+
+#navbar-shadow {
+  margin:0
+}
+
+#upcoming-deliverable-container-outer {
+  width:20%;
+}
+#upcoming-deliverable-container-inner {
+  background-color: white;
+  padding: 1em 1em;
+  border-radius: .5em;
+  box-shadow: 5px 10px #888888;
+}
+
+
+
+#upcoming-deliverable-item-container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  padding: .5em 0;
+}
+
+#upcoming-deliverable-item-container:last-child { border-bottom: none; }
+
+#dashboard-projects {
+  background-color: white;
+  padding: 1em 1em;
+  width: 50%;
+  border-top: 1px solid rgba(34,36,38,.15);
+  border-radius: .5em;
+  box-shadow: 5px 10px #888888;
+  margin-bottom: 5em;
+}
+
+#no-margin {
+  margin:0;
+  padding: .5em 0 .5em 0;
+}
+
+#dashboard-projects-header {
+  padding: 1em 0 .5em 0;
+  /* display:flex; */
+  /* justify-content: space-between; */
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+#upcoming-deliverable-date-container{
+  width: 25%;
+  padding: .5em 0;
+  margin: auto 0 ;
+  /* border-right: 1px solid rgba(34,36,38,.15); */
+}
+
+#upcoming-deliverable-description-container{
+  width: 70%;
+  text-align: left;
+  /* padding: .3em .3em; */
+  background-color: white;
+  border-radius: .5em;
+}
+
+#upcoming-deliverable-header {
+  display:flex;
+  align-items: center;
+}
+
+.deliverable-title {
+  font-size: 1em;
+  margin-top: 0;
+}
+#upcoming-deliverable-date {
+  font-style: italic;
+  padding: .3em 0 0 0;
+}
+
+#deliveralbe-description-copy {
+  font-size: .9em;
+  padding-left: .5em;
+}
+
+#notification-feed {
+  height:30em;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: .3em;
+  /* box-shadow: 5px 10px #888888; */
+}
+
+#recent-activity-container-outer {
+  width: 20%;
+  height: 34.5em;
+  padding: 1em .5em;
+  margin-bottom:2em;
+  /* overflow:hidden; */
+  border-radius: .5em;
+  box-shadow: 5px 10px #888888;
+  background-color: #E26D5A
+}
+#notification-header {
+  color: white
+}
+
+#notification-text {
+  font-weight: 400;
+}
+
+#notification-item {
+  padding: .2em;
+  border-bottom: 1px solid rgba(34,36,38,.15)
+}
+
+#dashboard-project-image {
+  height: 3em;
+  width: 3em;
+  margin: 0 1.5em 0 0;
+}
+
+#dashboard-title-description-image {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: top;
+  text-align: left;
+  padding: .5em 0 0 .5em;
+  align-items: center;
+  /* width: 60%; */
+}
+
+#dashboard-title-description-image p {
+  font-size: .8em;
+  margin: 0;
+}
+
+#dashboard-title-description-image h2 {
+  font-size: 1.2em;
+}
+
+#dashboard-label-div-project {
+  padding-top: .5em
+}
+
+#dashboard-content {
+
+}
+
+#space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+#campaign-dates {
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#campaign-date-margins {
+  margin-right: 1em;
+}
+
+#due-next {
+  display: flex;
+  justify-content:flex-end;
+}
+#due-next-details {
+  text-align: left;
+  padding-left: .3em
+}
+
+#add-companies-campaign{
+  max-width: 38em;
+  min-width: 38em;
+  margin-top: .4em;
+  margin-left: 1em;
+}
+
+#button-margin {
+  margin-bottom: 1em;
+}
+
+#icon-larger i {
+  font-size: 1.5em;
+  padding-left: .3em;
+}
+
+#select-campaign-project {
+  width:50%;
+}
+
+
+time.icon
+{
+  font-size: .5em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd;
+  overflow: hidden;
+}
+
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.1em 0;
+  color: #fff;
+  background-color: #E26D5A;
+  border-top-right-radius: .6em;
+  border-top-left-radius: .6em;
+}
+
+time.icon span {
+  font-size: 3.8em;
+  letter-spacing: -0.05em;
+  padding-top: 0.25em;
+  color: #2f2f2f;
+  border-radius: .1em
+}
+
+time {
+  max-width: 8em
+}

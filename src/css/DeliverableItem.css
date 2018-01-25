@@ -1,0 +1,44 @@
+#deliverable-container-outer{
+  padding: 1em 1em;
+  background-color: white;
+  border-radius: .5em;
+  box-shadow: 5px 10px #888888;
+}
+
+#deliverable-container{
+  border: 1px solid rgba(34,36,38,.15);
+  border-radius: .28571429rem;
+  padding: 1em 1em;
+  background-color: white;
+  border-radius: .5em;
+}
+
+#deliverable-item-container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+#deliverable-item-container:last-child { border-bottom: none; }
+
+#icon-container {
+  width: 30%;
+  padding: .5em 0;
+  margin: auto
+}
+
+
+
+
+#deliverable-description-container {
+  width:70%;
+  text-align: left;
+  padding: .7em .7em;
+  background-color: white;
+  border-radius: .5em;
+}
+
+#delivery-date-info {
+  margin-top: .3em;
+  display: flex;
+  justify-content: flex-end;
+}

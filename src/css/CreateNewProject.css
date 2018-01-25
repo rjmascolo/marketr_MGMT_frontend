@@ -1,0 +1,50 @@
+#group-field{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+#flex-grow2 {
+  width:62%;
+}
+#flex-grow {
+  padding-top: 1.55em;
+  width: 35%;
+  margin: 0 0 1em;
+}
+#add-users-project{
+  max-width: 40em;
+  min-width: 40em;
+  margin-right: 1em;
+}
+
+#create-project-data{
+  padding: 0em 0 1em 0;
+  margin: 0em 0 1em 0;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+#text-area {
+  height: 5em;
+}
+
+#create-project-deliverable-header {
+  display:flex;
+  justify-content: space-between;
+  padding: 0 0 .5em 0;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+#deliverable-create-project-item {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: .5em 0 .5em 0;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  margin: 0 0 0 0;
+}
+
+#project-deliverable-description {
+  flex-grow: 1;
+  padding: 0 1em 0 0;
+}

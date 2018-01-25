@@ -1,0 +1,21 @@
+
+
+
+#create-revision-submit-div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 48em;
+  margin-right: 0
+}
+
+#button-div{
+  width: 25%;
+}
+
+#textarea-revision-description {
+
+  height: 4.2em !important;
+  max-height: 8em !important;
+  min-height: 4.2em !important;
+
+}

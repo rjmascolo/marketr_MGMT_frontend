@@ -1,0 +1,78 @@
+#accordion-container {
+
+}
+
+#div-header{
+  font-family: 'Rubik', sans-serif;
+}
+
+#accordian-header {
+  display:flex;
+  justify-content: flex-end;
+  border-top-right-radius: .28571429rem;
+  border-top-left-radius: .28571429rem;
+  box-shadow: 1px 1px 2px 1px rgba(34,36,38,.15);
+  background-color: #E26D5A;
+}
+
+#project-header {
+  margin: .3em 1em .3em 1em;
+  vertical-align: bottom;
+}
+
+#revision-button {
+  margin: .5em 1em .5em 0;
+}
+
+#accordian-seman{
+  border-top-right-radius: 0rem;
+  border-top-left-radius: 0rem;
+  width:100%;
+}
+
+#revision-title{
+  display:flex;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.8em;
+}
+#accordian-content {
+  border-top: 1px solid rgba(34,36,38,.15);
+}
+
+#revision-description {
+  margin: 1em 0 1em 0;
+}
+
+#revision-description p {
+  text-align: left;
+}
+
+#asset-container {
+  border-top: 1px solid rgba(34,36,38,.15);
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0 1em 0;
+}
+#asset-header {
+  text-align: left;
+}
+
+#asset-links {
+  margin: 0 .3em;
+}
+
+#comment-container{
+  margin: 1em 0 1em 0;
+}
+
+#single-comment-header{
+  display:flex;
+  justify-content: space-between;
+}
+
+#single-comment {
+  margin: .4em .4em;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
