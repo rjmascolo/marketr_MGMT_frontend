@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 const token = localStorage.getItem('token')
 
-const API_URL = "http://localhost:3000/"
+const API_URL = "https://marketr-mgmt-backend.herokuapp.com/"
 
 const headers = {
     'Content-Type': 'application/json',
