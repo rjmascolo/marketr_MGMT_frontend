@@ -13,6 +13,7 @@ This application is made using React and Redux on the frontend and the backend i
 [Check it out!](https://marketr-mgmt-frontend.firebaseapp.com/)
 
 Use the UN and PW below to access an account with seed data to play around with.
+#
 ryan@email.com 
 123
 
