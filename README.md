@@ -8,7 +8,7 @@ There is also a notification center that will display all of the recent activity
 
 ### How is it made? ###
 
-This application is made using React and Redux on the frontend and the backend in Ruby on Rails. The frontend is styled with a mixture of th Semanti UI CSS library along with custom CSS styling. The frontend also utilizes some librarys like Draft.js that is used to createa a wysiwyg editor. The backend utializes the gem Paperclip that helps manage files that are uploaded and is linked with Amazon's S3 to store files.
+This application is made using React and Redux on the frontend and the backend in Ruby on Rails. The frontend is styled with a mixture of th Semantic UI CSS library along with custom CSS styling. The frontend also utilizes some librarys like Draft.js that is used to create a wysiwyg editor. The backend utializes the gem Paperclip that helps manage files that are uploaded and is linked with Amazon's S3 to store files.
 
 [Check it out!](https://marketr-mgmt-frontend.firebaseapp.com/)
 
