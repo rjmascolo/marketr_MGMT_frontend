@@ -31,6 +31,7 @@ class Comment extends React.Component {
   }
 
   render() {
+    console.log(this.props)
   return (
     <div id="single-comment">
       <div id="single-comment-header">
@@ -42,9 +43,6 @@ class Comment extends React.Component {
         <div>
           { this.props.comments_user && this.props.current_user.id === this.props.comments_user.id ? (
             <Button.Group basic size='small'>
-              <Button icon onClick={this.handleEdit} compact>
-                <Icon name='edit' color="grey" />
-              </Button>
               <Button icon onClick={this.handleDelete} color="red" compact circular negative>
                 <Icon name="delete" color="red" />
               </Button>

@@ -13,30 +13,19 @@ import '../css/projectAccordian.css'
 
 class RevisionsAccordian extends Component {
   state = {
-    activeIndex: 0,
     revisionItemModal: {
       open: false,
       revisionId: ''
     },
-    revisionModal: false,
-    reRender: false
+    revisionModal: false
   }
 
-  triggerRerender = () => {
-    this.setState( prevState => {
-      return {reRender: !prevState.reRender}
-    })
-  }
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps
     const { activeIndex } = this.state
     const newIndex = activeIndex === index ? -1 : index
     this.setState({ activeIndex: newIndex })
-  }
-
-  changeActiveIndex = (id) => {
-    this.setState({ activeIndex: id })
   }
 
   show = (e) => {
@@ -52,14 +41,14 @@ class RevisionsAccordian extends Component {
   showRevision = () =>   this.setState({revisionModal: true})
   close = () => this.setState({ revisionItemModal:{open: false, revisionId: ''} })
 
-  closeRevision = () => this.setState({ revisionModal: false })
+  closeRevision = (id) => this.setState({ revisionModal: id })
 
   render() {
     const { activeIndex } = this.state
 
     const revisions = this.props.revisions? this.props.revisions.map( (revision, index ) => {
       return(
-      { menuItem: revision.revision_type === "creative brief" ? "Creative Brief" : `Revision #${index}`,
+      { menuItem: revision.revision_type === "creative brief" ? "Creative Brief" : `Revision #${index}`, activeIndex: {index},
         render: () => <Tab.Pane attached={false}>
           <ProjectAccordianItem
             key={index}
@@ -81,7 +70,7 @@ class RevisionsAccordian extends Component {
         </div>
 
         {/* <Accordion styled id="accordian-seman"> */}
-          <Tab menu={{ secondary: true, pointing: true }} panes={revisions} id="revision-tabs" />
+          <Tab menu={{ secondary: true, pointing: true }} defaultActiveIndex={this.props.revisions? this.props.revisions.length-1 : 0} panes={revisions} id="revision-tabs" />
 
             <Modal size="small" open={this.state.revisionItemModal.open} onClose={this.close}>
                <Modal.Header>Enter In Documents</Modal.Header>
