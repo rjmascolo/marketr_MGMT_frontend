@@ -8,14 +8,6 @@ import '../css/dashboard.css'
 import {connect} from 'react-redux'
 
 class Projects extends React.Component {
-
-  state = {
-    activeModal: false
-  }
-
-  show = () => this.setState({ activeModal: true})
-  close = () => this.setState({ activeModal: false })
-
   render() {
     const projects = this.props.projects ? this.props.projects.map( (project,i) => {
       return <ProjectItem key={i} project={project}/>

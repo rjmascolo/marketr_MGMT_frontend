@@ -37,6 +37,13 @@ function loggedinReducer(state = false, action) {
 }
 
 function projectsReducer(state = [], action) {
+  let projectIndex;
+  let newProject;
+  let newDeliverables;
+  let newUsers;
+  let newRevisions;
+  let newNotifications;
+
   switch (action.type) {
 
     case "ADD_PROJECT":
@@ -50,54 +57,54 @@ function projectsReducer(state = [], action) {
 
     case "UPDATE_PROJECT_DETAILS":
       projectIndex = state.findIndex(project => project.id === action.project.id);
-      let newProject = action.project;
-      // newProject.description = action.project.description
-      // newProject.name = action.project.name
-      // newProject.image = action.project.image
-      // newProject.project_type = action.project.project_type
+      newProject = action.project;
 
       return [...state.slice(0, projectIndex), newProject, ...state.slice(projectIndex + 1) ]
 
+    case 'UPDATE_DELIVERABLE':
+      projectIndex = state.findIndex(project => project.id === action.deliverable.project_id);
+      newDeliverables = deliverablesReducer(state[projectIndex].deliverables, action);
+      return [
+          ...state.slice(0, projectIndex),
+          { ...state[projectIndex], deliverables: newDeliverables },
+          ...state.slice(projectIndex + 1)
+        ]
+
     case "UPDATE_PROJECT_USERS":
+      projectIndex = state.findIndex(project => project.id === action.users.project_id);
+      newUsers = usersReducer(state[projectIndex].get_users, action);
+      return [
+          ...state.slice(0, projectIndex),
+          { ...state[projectIndex], get_users: newUsers },
+          ...state.slice(projectIndex + 1)
+        ]
+
     case "ADD_REVISION":
+      projectIndex = state.findIndex(project => project.id === action.revision.revision.project_id);
+      newRevisions = revisionsReducer(state[projectIndex].revisions, action);
+      newNotifications = notificationsReducer(state[projectIndex].notifications, action)
+      return [
+          ...state.slice(0, projectIndex),
+          { ...state[projectIndex], revisions: newRevisions, notifications: newNotifications},
+          ...state.slice(projectIndex + 1)
+        ]
+
     case "ADD_REVISION_ITEM":
     case "DELETE_REVISION_ITEM":
+      projectIndex = state.findIndex(project => project.id === action.item.project_id);
+      newRevisions = revisionsReducer(state[projectIndex].revisions, action);
+      newNotifications = notificationsReducer(state[projectIndex].notifications, action)
+      return [
+          ...state.slice(0, projectIndex),
+          { ...state[projectIndex], revisions: newRevisions, notifications: newNotifications},
+          ...state.slice(projectIndex + 1)
+        ]
+
     case "ADD_COMMENT":
     case "DELETE_COMMENT":
-    case 'UPDATE_DELIVERABLE':
-      let projectIndex;
-      let newRevisions;
-      let newDeliverables;
-      let newNotifications;
-      if (action.revision){
-        projectIndex = state.findIndex(project => project.id === action.revision.revision.project_id);
-        newRevisions = revisionsReducer(state[projectIndex].revisions, action);
-        newNotifications = notificationsReducer(state[projectIndex].notifications, action)
-      } else if (action.item) {
-        projectIndex = state.findIndex(project => project.id === action.item.project_id);
-        newRevisions = revisionsReducer(state[projectIndex].revisions, action);
-        newNotifications = notificationsReducer(state[projectIndex].notifications, action)
-      } else if (action.comment){
-        projectIndex = state.findIndex(project => project.id === action.comment.project_id);
-        newRevisions = revisionsReducer(state[projectIndex].revisions, action);
-        newNotifications = notificationsReducer(state[projectIndex].notifications, action)
-      } else if (action.deliverable){
-        projectIndex = state.findIndex(project => project.id === action.deliverable.project_id);
-        newDeliverables = deliverablesReducer(state[projectIndex].deliverables, action);
-        return [
-            ...state.slice(0, projectIndex),
-            { ...state[projectIndex], deliverables: newDeliverables },
-            ...state.slice(projectIndex + 1)
-          ]
-      } else if (action.users) {
-        projectIndex = state.findIndex(project => project.id === action.users.project_id);
-        let newUsers = usersReducer(state[projectIndex].get_users, action);
-        return [
-            ...state.slice(0, projectIndex),
-            { ...state[projectIndex], get_users: newUsers },
-            ...state.slice(projectIndex + 1)
-          ]
-      }
+      projectIndex = state.findIndex(project => project.id === action.comment.project_id);
+      newRevisions = revisionsReducer(state[projectIndex].revisions, action);
+      newNotifications = notificationsReducer(state[projectIndex].notifications, action)
       return [
           ...state.slice(0, projectIndex),
           { ...state[projectIndex], revisions: newRevisions, notifications: newNotifications},

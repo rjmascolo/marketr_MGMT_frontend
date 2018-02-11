@@ -33,6 +33,20 @@ class LogIn extends React.Component {
     this.setState({fields: {email: '', password: ''}})
   }
 
+  logInWithSeedData = () => {
+    login("ryan@email.com", "123")
+    .then(user => {
+      if(user.error){
+        this.setState({error:true})
+      } else {
+        this.props.fetchUser(user.id)
+        localStorage.setItem('token', user.token)
+        this.props.history.push('/dashboard')
+      }
+    })
+    this.setState({fields: {email: '', password: ''}})
+  }
+
   render() {
     return (
       <div id="fill-page" style={{ minHeight: window.innerHeight}}>
@@ -69,6 +83,9 @@ class LogIn extends React.Component {
 
           <div className="ui message">
             New to us? <a href="/sign-up">Sign Up</a>
+          </div>
+          <div className="ui message">
+            <div id="login-button" className="ui fluid large submit button" onClick={this.logInWithSeedData}>Log In With Seed Data</div>
           </div>
         </div>
       </div>

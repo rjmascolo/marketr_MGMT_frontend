@@ -2,7 +2,8 @@ import fetch from 'isomorphic-fetch';
 
 const token = localStorage.getItem('token')
 
-const API_URL = "https://marketr-mgmt-backend.herokuapp.com/"
+const API_URL = "http://localhost:3000/"
+// const API_URL = "https://marketr-mgmt-backend.herokuapp.com/"
 
 const headers = {
     'Content-Type': 'application/json',
@@ -71,6 +72,7 @@ export const createRevisionAsset = (item, projectId) => {
     })
       .then(response => response.json())
       .then(json => {
+        debugger;
         const itemNew = Object.assign( json, {project_id: projectId});
         dispatch({ type: 'ADD_REVISION_ITEM', item: itemNew } );
       }

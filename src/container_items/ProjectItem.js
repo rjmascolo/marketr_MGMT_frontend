@@ -29,6 +29,7 @@ class ProjectItem extends React.Component {
                 </div>
               </div>
             </div>
+            {nextDeliverables.length > 0 ? (
             <div id="due-next">
               <div>
                 <b>Due Next:</b>
@@ -40,7 +41,8 @@ class ProjectItem extends React.Component {
                     : <p><i><b>{moment(deliverable.date).format("M/D")}</b></i> {deliverable.description}</p> }</p>
                 })}
               </div>
-            </div>
+            </div>): null
+          }
           </Item.Content>
         </Item>
     )
