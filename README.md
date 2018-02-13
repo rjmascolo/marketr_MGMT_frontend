@@ -12,9 +12,4 @@ This application is made using React and Redux on the frontend and the backend i
 
 [Check it out!](https://marketr-mgmt-frontend.firebaseapp.com/)
 
-Use the UN and PW below to access an account with seed data to play around with. <br />
-
-UN: ryan@email.com <br />
-PW: 123
-
 The backend is located on a different repository. [Check it out!](https://github.com/rjmascolo/marketr_MGMT_backend)
