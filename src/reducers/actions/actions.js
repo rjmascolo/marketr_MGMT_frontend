@@ -72,7 +72,6 @@ export const createRevisionAsset = (item, projectId) => {
     })
       .then(response => response.json())
       .then(json => {
-        debugger;
         const itemNew = Object.assign( json, {project_id: projectId});
         dispatch({ type: 'ADD_REVISION_ITEM', item: itemNew } );
       }
@@ -156,8 +155,7 @@ export const deleteFile = ( itemId, projectId ) => {
     dispatch({ type: 'START_DELETEING_COMMENTS' });
     return fetch(`${API_URL}revision_items/${itemId}`, {
       method:'DELETE',
-      headers: headers,
-      // body:JSON.stringify(commentId)
+      headers: headers
     })
       .then(response => response.json())
       .then(freshItem => {

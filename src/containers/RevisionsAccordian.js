@@ -41,7 +41,7 @@ class RevisionsAccordian extends Component {
   showRevision = () =>   this.setState({revisionModal: true})
   close = () => this.setState({ revisionItemModal:{open: false, revisionId: ''} })
 
-  closeRevision = (id) => this.setState({ revisionModal: id })
+  closeRevision = (id) => this.setState({ revisionModal: false })
 
   render() {
     const { activeIndex } = this.state
@@ -118,9 +118,5 @@ function mapStateToProps(state, props) {
     : null
   }
 }
-
-// function mapDispatchToProps(dispatch) {
-//   return {}
-// }
 
 export default withRouter(connect(mapStateToProps)(RevisionsAccordian));

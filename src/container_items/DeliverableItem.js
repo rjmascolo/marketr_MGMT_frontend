@@ -33,7 +33,7 @@ class DelieverableItem extends React.Component{
             </div>
           ) : (
             <div id="icon-container">
-              <time datetime="2014-09-20" class="icon">
+              <time class="icon">
                 <em>Saturday</em>
                 <strong>{date[0]}</strong>
                 <span>{date[1]}</span>

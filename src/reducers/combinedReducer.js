@@ -118,6 +118,9 @@ function projectsReducer(state = [], action) {
 
 function revisionsReducer(state, action) {
 
+  let revisionIndex;
+  let newRevisionItems;
+
   switch (action.type) {
 
   case "ADD_REVISION":
@@ -130,11 +133,16 @@ function revisionsReducer(state, action) {
         { ...state[revisionIndex], comments: newRevisionItems },
         ...state.slice(revisionIndex + 1)
       ]
-  case "ADD_REVISION_ITEM":
   case "DELETE_REVISION_ITEM":
+  revisionIndex = state.findIndex(revision => revision.id === action.item.revision_id);
+  newRevisionItems = revisionItemsReducer(state[revisionIndex].revision_items, action);
+  return [
+      ...state.slice(0, revisionIndex),
+      { ...state[revisionIndex], revision_items: newRevisionItems },
+      ...state.slice(revisionIndex + 1)
+    ]
+  case "ADD_REVISION_ITEM":
   case "ADD_COMMENT":
-    let revisionIndex;
-    let newRevisionItems;
     if (action.item){
       revisionIndex = state.findIndex(revision => revision.id === action.item.item.revision_id);
       newRevisionItems = revisionItemsReducer(state[revisionIndex].revision_items, action);
