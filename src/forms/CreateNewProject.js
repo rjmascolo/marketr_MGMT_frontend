@@ -37,10 +37,11 @@ class CreateNewProject extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-
     const state = this.state
     const errors = createProjectFormValidation(state)
-    if (Object.keys(errors) === undefined) {
+    console.log(Object.keys(errors))
+    if (Object.keys(errors).length === 0) {
+
       this.props.createNewProject(state, this.props.current_user).then(x => this.props.history.push(`/projects/${x.id}`))
 
       this.props.close()

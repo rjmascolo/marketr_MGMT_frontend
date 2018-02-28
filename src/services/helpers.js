@@ -45,7 +45,7 @@ export const restrictCharToLength = (string, charLength) => {
   let x = string.split(' ')
   let length = 0
   let wordCount = 0
-  while ( length < charLength ) {
+  while ( length < charLength && x.length <= wordCount ) {
     length += (x[wordCount].length + 1)
     wordCount++
   }

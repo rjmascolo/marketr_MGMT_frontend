@@ -143,6 +143,7 @@ export const createNewProject = (projectHash, userId) => {
       .then(project => {
         project.revisions[0]["revision_items"] = []
         project.revisions[0]["comments"] = []
+        debugger;
         dispatch({ type: 'ADD_PROJECT', project } );
         return project
       }
