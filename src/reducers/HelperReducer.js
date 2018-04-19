@@ -2,7 +2,8 @@ export function revisionItemsReducer(state,action) {
   switch(action.type) {
 
     case "ADD_REVISION_ITEM":
-      return [...state, action.item.item];
+      const newRevisionItem = Object.assign(action.item.item, {file_url: action.item.file_url})
+      return [...state, newRevisionItem];
     case "DELETE_REVISION_ITEM":
       return state.filter(item => item.id !== action.item.id);
   }

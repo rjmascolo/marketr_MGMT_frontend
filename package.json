@@ -8,7 +8,6 @@
     "immutable": "^3.8.2",
     "moment": "^2.20.1",
     "react": "^16.2.0",
-    "react-big-calendar": "^0.17.0",
     "react-datepicker": "^1.0.4",
     "react-dom": "^16.2.0",
     "react-draft-wysiwyg": "^1.12.4",

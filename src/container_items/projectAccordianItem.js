@@ -6,6 +6,7 @@ import Comment from '../container_items/Comment'
 import AssetItem from '../container_items/AssetItem'
 
 const ProjectAccordianItem = (props) => {
+  console.log(props.revision.revision_items)
   return (
     <div>
       <div id="revision-description" >
