@@ -15,7 +15,7 @@ class AssetItem extends React.Component {
 
   fileType = (fileName) => {
     const fileType = fileName.split(".")[1]
-    const imageFileEndings = ['jpg', 'jpeg', 'png', 'gif']
+    const imageFileEndings = ['jpg', 'jpeg', 'png', 'gif', 'svg']
     if( imageFileEndings.includes(fileType) ) {
       return <Icon name="image" color="teal"/>
     } else {
