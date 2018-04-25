@@ -107,6 +107,7 @@ export const createComment = (comment, projectId) => {
       .then(response => response.json())
       .then(commentRails => {
         const comment = Object.assign( commentRails, { project_id: parseInt(projectId) })
+        debugger;
         dispatch({ type: 'ADD_COMMENT', comment } );
       }
     );
