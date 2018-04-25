@@ -16,6 +16,14 @@ export function commentsReducer(state,action) {
       return [...state, action.comment.comment];
     case "DELETE_COMMENT":
       return state.filter(comment => comment.id !== action.comment.id);
+    case "UPDATE_COMMENT":
+      return state.map( comment => {
+        if(comment.id === action.comment.id ){
+          return action.comment
+        } else {
+          return comment
+        }
+      })
   }
 }
 

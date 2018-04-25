@@ -8,7 +8,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import { createComment } from '../reducers/actions/actions'
 
-import {convertFromRaw, convertToRaw} from 'draft-js';
+import {convertToRaw} from 'draft-js';
 
 import {connect} from 'react-redux'
 import '../css/CommentForm.css'

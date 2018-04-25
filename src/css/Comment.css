@@ -42,6 +42,11 @@
   border-radius: .3em;
 }
 
+#smaller-button {
+  padding: .6em 1.5em .6em;
+  margin-right: 2em;
+}
+
 #comment-paragraph {
   margin: .6em .8em;
 }

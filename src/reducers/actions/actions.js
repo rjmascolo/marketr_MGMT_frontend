@@ -2,8 +2,8 @@ import fetch from 'isomorphic-fetch';
 
 const token = localStorage.getItem('token')
 
-// const API_URL = "http://localhost:3000/"
-const API_URL = "https://marketr-mgmt-backend.herokuapp.com/"
+const API_URL = "http://localhost:3000/"
+// const API_URL = "https://marketr-mgmt-backend.herokuapp.com/"
 
 const headers = {
     'Content-Type': 'application/json',
@@ -108,6 +108,23 @@ export const createComment = (comment, projectId) => {
       .then(commentRails => {
         const comment = Object.assign( commentRails, { project_id: parseInt(projectId) })
         dispatch({ type: 'ADD_COMMENT', comment } );
+      }
+    );
+  };
+}
+
+export const updateComment = (comment, projectId) => {
+  return (dispatch) => {
+    dispatch({ type: 'START_UPDATING_COMMENTS' });
+    return fetch(`${API_URL}comments/${comment.id}`, {
+      method:'PATCH',
+      headers: headers,
+      body:JSON.stringify( comment )
+    })
+      .then(response => response.json())
+      .then(commentRails => {
+        const comment = Object.assign( commentRails, { project_id: parseInt(projectId) })
+        dispatch({ type: 'UPDATE_COMMENT', comment } );
       }
     );
   };

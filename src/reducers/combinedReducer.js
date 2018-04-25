@@ -102,6 +102,7 @@ function projectsReducer(state = [], action) {
 
     case "ADD_COMMENT":
     case "DELETE_COMMENT":
+    case "UPDATE_COMMENT":
       projectIndex = state.findIndex(project => project.id === action.comment.project_id);
       newRevisions = revisionsReducer(state[projectIndex].revisions, action);
       newNotifications = notificationsReducer(state[projectIndex].notifications, action)
@@ -142,16 +143,14 @@ function revisionsReducer(state, action) {
       ...state.slice(revisionIndex + 1)
     ]
   case "ADD_REVISION_ITEM":
+    revisionIndex = state.findIndex(revision => revision.id === action.item.item.revision_id);
+    newRevisionItems = revisionItemsReducer(state[revisionIndex].revision_items, action);
+    return [
+        ...state.slice(0, revisionIndex),
+        { ...state[revisionIndex], revision_items: newRevisionItems },
+        ...state.slice(revisionIndex + 1)
+      ]
   case "ADD_COMMENT":
-    if (action.item){
-      revisionIndex = state.findIndex(revision => revision.id === action.item.item.revision_id);
-      newRevisionItems = revisionItemsReducer(state[revisionIndex].revision_items, action);
-      return [
-          ...state.slice(0, revisionIndex),
-          { ...state[revisionIndex], revision_items: newRevisionItems },
-          ...state.slice(revisionIndex + 1)
-        ]
-    } else if (action.comment) {
       revisionIndex = state.findIndex(revision => revision.id === action.comment.comment.revision_id);
       newRevisionItems = commentsReducer(state[revisionIndex].comments, action);
       return [
@@ -159,6 +158,13 @@ function revisionsReducer(state, action) {
           { ...state[revisionIndex], comments: newRevisionItems },
           ...state.slice(revisionIndex + 1)
         ]
-    }
+  case "UPDATE_COMMENT":
+    revisionIndex = state.findIndex(revision => revision.id === action.comment.revision_id);
+    newRevisionItems = commentsReducer(state[revisionIndex].comments, action);
+    return [
+        ...state.slice(0, revisionIndex),
+        { ...state[revisionIndex], comments: newRevisionItems },
+        ...state.slice(revisionIndex + 1)
+      ]
   }
 }
